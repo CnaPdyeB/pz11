@@ -1,10 +1,171 @@
-pz11
-код для заданий
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/992b7f09-b063-40ea-a109-5d28f304307d" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ce99f4f2-408a-45dc-84cd-60d5310b67f1" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7f1bf309-b8ff-4197-8219-d2f04eb2f3d9" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/32264095-2305-456f-a3ef-b6c3d5d5f78e" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5bd3ee75-5857-415f-a8b0-4d93f586ee9c" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c80b9894-1f8a-4fab-bc56-85389f7cabe5" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b6ec2650-deab-4d13-bc4f-0d1cf0395992" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ab76e80d-bdfc-478c-9b82-f4f75ee55819" />
+![Uploading image.png…]()
+
+Задание 1.
+#include <iostream>
+using namespace std;
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cin >> n;
+    // Ваш код:
+    for (int i = 1; i <= n; i++) {
+        cout << i << " ";
+    }
+    return 0;
+}
+
+Задание 2.
+#include <iostream>
+using namespace std;
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cin >> n;
+    // Ваш код:
+    int sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum += i;
+    }
+    cout << sum;
+    return 0;
+}
+
+Задание 3.
+#include <iostream>
+using namespace std;
+int main() {
+    setlocale(LC_ALL, "Russian");
+    // Ваш код:
+    int num;
+    int sum = 0;
+    
+    while (true) {
+        cin >> num;
+        if (num == 0) {
+            break;
+        }
+        sum += num;
+    }
+    
+    cout << sum;
+    return 0;
+}
+
+Задание 4.
+#include <iostream>
+using namespace std;
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cin >> n;
+    // Ваш код:
+    for (int i = 1; i <= n; i++) {
+        if (i % 2 == 0) {
+            cout << i << " ";
+        }
+    }
+    return 0;
+}
+
+Задание 5.
+#include <iostream>
+using namespace std;
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cin >> n;
+    // Ваш код:
+    long long factorial = 1;
+    for (int i = 1; i <= n; i++) {
+        factorial *= i;
+    }
+    cout << factorial;
+    return 0;
+}
+
+Задание 6.
+#include <iostream>
+using namespace std;
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cin >> n;
+    // Ваш код:
+    
+    // Если введён 0, то по условию игнорируем (выводим 0)
+    if (n == 0) {
+        cout << 0;
+        return 0;
+    }
+    
+    int count = 0;
+    // Обрабатываем отрицательные числа (берём модуль)
+    if (n < 0) {
+        n = -n;
+    }
+    
+    while (n > 0) {
+        n /= 10;  // Удаляем последнюю цифру
+        count++;   // Увеличиваем счётчик
+    }
+    
+    cout << count;
+    return 0;
+}
+
+Задание 7.
+#include <iostream>
+using namespace std;
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cin >> n;
+    // Ваш код:
+    
+    // 1 не является простым числом
+    if (n <= 1) {
+        cout << "Не простое";
+        return 0;
+    }
+    
+    bool isPrime = true;
+    
+    // Проверяем делители от 2 до sqrt(n)
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    
+    if (isPrime) {
+        cout << "Простое";
+    } else {
+        cout << "Не простое";
+    }
+    
+    return 0;
+}
+
+Задание 8.
+#include <iostream>
+using namespace std;
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cin >> n;
+    // Ваш код:
+    
+    int i = 1;
+    while (i <= n) {
+        int j = 1;
+        while (j <= n) {
+            cout << i * j << " ";
+            j++;
+        }
+        cout << endl;
+        i++;
+    }
+    
+    return 0;
+}
